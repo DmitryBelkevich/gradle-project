@@ -2,6 +2,10 @@ plugins {
     id 'java'
 }
 
+ext {
+    junit_version = "5.3.1"
+}
+
 group 'com.hard'
 version '1.0-SNAPSHOT'
 
@@ -9,6 +13,11 @@ repositories {
     mavenCentral()
 }
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junit_version}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junit_version}"
 }
