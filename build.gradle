@@ -2,10 +2,6 @@ plugins {
     id 'java'
 }
 
-ext {
-    junit_version = "5.3.1"
-}
-
 group 'com.hard'
 version '1.0-SNAPSHOT'
 
@@ -15,6 +11,10 @@ repositories {
 
 test {
     useJUnitPlatform()
+}
+
+ext {
+    junit_version = "5.3.1"
 }
 
 dependencies {
