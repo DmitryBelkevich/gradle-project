@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.hard'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junit_version = "5.+"
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:${junit_version}'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
